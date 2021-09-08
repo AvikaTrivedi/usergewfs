@@ -3,7 +3,7 @@ version: "3.7"
 services:
   userge:
       build:
-        context: https://github.com/satyanandatripathi/USERGE-X.git#alpha
+        context: https://github.com/satyanandatripathi/Ultroid.git#main
       restart: on-failure
       env_file:
-        - config.env
+        - .env
