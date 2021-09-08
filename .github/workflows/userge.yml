@@ -33,13 +33,13 @@ jobs:
        - name: cloning repo
          continue-on-error: false
          run: |
-           git clone https://${GitHubName}:${{ secrets.GH_TOKEN }}@${{ secrets.CREDS }} userge
-       - name: Running Userge
+           git clone https://${GitHubName}:${{ secrets.GH_TOKEN }}@${{ secrets.CREDS }} Ultroid
+       - name: Running Ultroid
          timeout-minutes: 350
          continue-on-error: true
          run: |
-           sudo cp ./docker-compose.yml userge/docker-compose.yml
-           cd userge
+           sudo cp ./docker-compose.yml Ultroid/docker-compose.yml
+           cd Ultroid
            docker-compose up -d
            docker-compose logs -f
        - name: Loop workflow
